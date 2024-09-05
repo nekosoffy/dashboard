@@ -29,3 +29,33 @@ p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
 }
 
+#container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+header {
+    grid-row: span 3;
+}
+
+#top-wrapper {
+    grid-column: 2 / span 3;
+}
+
+main {
+    grid-column: 2 / span 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+}
+
+main h2 {
+    grid-column: 1 / -1;
+}
+
+#announcements {
+    grid-column: 4 / 5;
+}
+
+#trending {
+    grid-column: 4 / 5;
+}
