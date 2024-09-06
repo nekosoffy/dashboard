@@ -41,6 +41,14 @@ p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
 }
 
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
 #container {
     display: grid;
     grid-template-columns: max-content auto;
@@ -54,15 +62,46 @@ header {
     padding-right: 2.4vw;
 }
 
-ul {
-    padding: 0;
+#logo img {
+    width: max(30px,4vw);
+    transform: translateY(-2px);
 }
 
-li {
-    list-style-type: none;
+#logo {
+    display: inline-flex;
+    align-items: center;
 }
 
+h1 {
+    font-size: max(15px,2vw);
+}
 
+#navigation {
+    margin-top: 8%;
+}
+
+nav img {
+    display: inline;
+    width: max(13px, 1.1vw);
+    margin: 0 0.3vw 0 0.8vw;
+    transform: translateY(2.5px);
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav li {
+    font-size: max(13px,1.2vw);
+    font-weight: bold;
+}
+
+nav li:nth-child(7) {
+    margin-top: 10%;
+}
 
 a:link, a:visited {
     text-decoration: none;
@@ -107,45 +146,4 @@ article {
 
 #trending div {
     background-color: var(--main-color);
-}
-
-#logo img {
-    width: max(30px,4vw);
-    transform: translateY(-2px);
-}
-
-#logo {
-    display: inline-flex;
-    align-items: center;
-}
-
-h1 {
-    font-size: max(15px,2vw);
-}
-
-#navigation {
-    margin-top: 8%;
-}
-
-nav img {
-    display: inline;
-    width: max(13px, 1.1vw);
-    margin: 0 0.3vw 0 0.8vw;
-    transform: translateY(2.5px);
-}
-
-nav ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
-}
-
-nav li {
-    font-size: max(13px,1.2vw);
-    font-weight: bold;
-}
-
-nav li:nth-child(7) {
-    margin-top: 10%;
 }
