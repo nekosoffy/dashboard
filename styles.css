@@ -9,6 +9,10 @@
 
 :root {
     font-size: 62.5%;
+    --main-color: #EEE5BF;
+    --background-color: #E2D0BE;
+    --secondary-color: #734B5E;
+    --profile-theme-color: #DF99F0;
 }
 
 body {
@@ -32,24 +36,50 @@ p, h1, h2, h3, h4, h5, h6 {
 #container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    background-color: var(--background-color);
 }
 
 header {
     grid-row: span 3;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+li {
+    list-style-type: none;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover, a:active {
+    color: #FAA9A9;
 }
 
 #top-wrapper {
     grid-column: 2 / span 3;
+    background-color: var(--main-color);
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: white;
 }
 
 main {
     grid-column: 2 / span 2;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));  
 }
 
 main h2 {
     grid-column: 1 / -1;
+}
+
+article {
+    background-color: var(--main-color);
 }
 
 #announcements {
@@ -58,4 +88,8 @@ main h2 {
 
 #trending {
     grid-column: 4 / 5;
+}
+
+#trending div {
+    background-color: var(--main-color);
 }
