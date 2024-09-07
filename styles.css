@@ -50,7 +50,7 @@ li {
 
 #container {
     display: grid;
-    grid-template-columns: max-content auto;
+    grid-template-columns: max-content 1fr 1fr min-content;
     background-color: var(--background-color);
 }
 
@@ -129,19 +129,15 @@ form {
 }
 
 button {
-    background-color: var(--secondary-color);
+    background-color: var(--main-color);
     color: white;
     cursor: pointer;
+    border: none;
+    padding: 0;
 }
 
 button:active {
     transform: scale(0.90);
-}
-
-#search-button, #notification-button {
-    background-color: var(--main-color);
-    border: none;
-    padding: 0;
 }
 
 #search-button img {
@@ -220,6 +216,7 @@ button:active {
     font-weight: bold;
     width: max(50px,5vw);
     font-size: calc(0.9rem + 1vmin);
+    background-color: var(--secondary-color);
 }
 
 #new-button {
@@ -237,15 +234,60 @@ button:active {
 main {
     grid-column: 2 / span 2;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));  
+    grid-template-columns: repeat(auto-fit, minmax(40%,1fr));
+    grid-template-rows: max-content auto;
+    gap: 40px;
+    margin: 20px;
 }
 
 main h2 {
     grid-column: 1 / -1;
+    margin-bottom: -40px;
 }
 
-article {
+main article {
+    border-left: 10px solid var(--profile-theme-color);
     background-color: var(--main-color);
+    padding: 20px 20px 20px 20px;
+    border-radius: 8px;
+    display: grid;
+    align-items: center;
+    gap: 2px;
+}
+
+main div {
+    display: grid;
+    align-self: end;
+    grid-template-areas: "favorite view share";
+    grid-template-columns: repeat(3, max-content);
+    gap: 20px;
+    justify-self: end;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+main h3 {
+    align-self: end;
+}
+
+main p {
+    align-self: start;
+}
+
+main div img {
+    width: 1.5vw;
+}
+
+#favorite-button {
+    grid-area: favorite;
+}
+
+#view-button {
+    grid-area: view;
+}
+
+#share-button {
+    grid-area: share;
 }
 
 #announcements {
