@@ -32,23 +32,29 @@
         <div id="top-wrapper">
             <search>
                 <form action="">
-                <button type="submit" id="search-button" aria-label="search button" name="search"></button>
-                <input type="search" id="search" aria-label="search"/>
+                    <button type="button" id="search-button" aria-label="search button" name="search">
+                        <img src="./images/search.svg" alt=""></img>
+                    </button>
+                    <input type="search" id="search" aria-label="search"/>
                 </form>
             </search>
-            <button type="button" id="notification" aria-label="notification" name="notification"></button>
-            <div>
+            <button type="button" id="notification-button" aria-label="notification button" name="notification">
+                <img src="./images/notification.svg" alt=""></img>
+            </button>
+            <div id="upper-profile">
+                <img src="./images/kitty-jones.svg" alt="A profile picture"></img>
                 <p>Kitty Jones</p>
             </div>
-            <div>
-                <p>Hi there,</p>
+            <div id="profile">
+                <img src="./images/kitty-jones.svg" alt="A profile picture"></img>
+                <p>Hi there</p>
                 <p>Kitty Jones (@kitty)</p>
             </div>
-            <div>
-                <button type="button" id="notification" name="notification">New</button>
-                <button type="button" id="notification" name="notification">Upload</button>
-                <button type="button" id="notification" name="notification">Share</button>
-            </div> 
+            <div id="test">
+                <button type="button" class="command-button" id="new-button" name="new">New</button>
+                <button type="button" class="command-button" id="upload-button" name="upload">Upload</button>
+                <button type="button" class="command-button" id="share-button" name="share">Share</button>
+            </div>
         </div>
         <main>
             <h2>Your Projects</h2>

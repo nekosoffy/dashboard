@@ -29,7 +29,6 @@ body {
 }
 
 img, picture, video, canvas, svg {
-    display: block;
     max-width: 100%;
 }
 
@@ -113,13 +112,126 @@ a:hover, a:active {
 }
 
 #top-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     grid-column: 2 / span 3;
     background-color: var(--main-color);
+    row-gap: 10px;
+    align-items: center;
+    padding: 1%;
+}
+
+form {
+    display: grid;
+    grid-template-columns: max-content auto;
+    gap: 5px;
+    align-items: center;
 }
 
 button {
     background-color: var(--secondary-color);
     color: white;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.90);
+}
+
+#search-button, #notification-button {
+    background-color: var(--main-color);
+    border: none;
+    padding: 0;
+}
+
+#search-button img {
+    width: max(20px,1vw);
+    vertical-align: middle;
+}
+
+#search {
+    background-color: var(--background-color);
+    width: 33vw;
+    border: none;
+    border-radius: 10px;
+}
+
+#profile {
+    display: grid;
+    grid-column: 1 / 1;
+    grid-template-columns: max-content max-content;
+    column-gap: 10px;
+}
+
+#profile img {
+    width: max(50px,4vw);
+    grid-row: 1 / 3;
+}
+
+#profile p:first-of-type {
+    align-self: end;
+    font-size: calc(1rem + 1vmin);
+}
+
+#profile p:last-of-type {
+    align-self: start;
+    font-size: calc(1.2rem + 1vmin);
+    font-weight: bold;
+}
+
+#notification-button {
+    grid-column: 2 / 3;
+    justify-self: end;
+    margin-right: 1vw;
+}
+
+#notification-button img {
+    width: max(20px,1.4vw);
+    vertical-align: middle;
+}
+
+#upper-profile {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-column: 3 / 4;
+    align-items: center;
+    column-gap: 1vw;
+    font-weight: bold;
+    font-size: calc(1rem + 1vmin);
+}
+
+#upper-profile img {
+    width: max(25px,3vw);
+}
+
+#test {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-areas: ". new upload share .";
+    grid-template-columns: 2fr max-content max-content max-content 5vw;
+    grid-column: 2 / span 2;
+    gap: 1vw;
+}
+
+.command-button {
+    border-radius: 20px;
+    border: none;
+    padding: 5px;
+    font-weight: bold;
+    width: max(50px,5vw);
+    font-size: calc(0.9rem + 1vmin);
+}
+
+#new-button {
+    grid-area: new;
+}
+
+#upload-button {
+    grid-area: upload;
+}
+
+#share-button {
+    grid-area: share;
 }
 
 main {
