@@ -16,10 +16,10 @@
 
 :root {
     font-size: 62.5%;
-    --main-color: #EEE5BF;
-    --background-color: #E2D0BE;
-    --secondary-color: #734B5E;
-    --profile-theme-color: #DF99F0;
+    --main-color: #dfccf5;
+    --background-color: #ffffff;
+    --secondary-color: #331f5e;
+    --profile-theme-color: #be4c68;
 }
 
 body {
