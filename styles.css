@@ -20,6 +20,7 @@
     --background-color: #ffffff;
     --secondary-color: #331f5e;
     --profile-theme-color: #be4c68;
+    --font-color: #363435;
 }
 
 body {
@@ -272,6 +273,7 @@ main h3 {
 
 main p {
     align-self: start;
+    color: var(--font-color);
 }
 
 main div img {
@@ -294,12 +296,17 @@ aside h2 {
     margin-bottom: 10px;
 }
 
+aside p {
+    color: var(--font-color);
+}
+
 #side-wrapper {
     margin-right: 20px;
 }
 
 hr {
     margin: 20px 0 20px 0;
+    border: 1px solid rgb(175, 170, 170);
 }
 
 #announcements div {
@@ -340,4 +347,9 @@ hr {
 .mini-profile img {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+}
+
+.mini-profile div p:first-child {
+    color: black;
+    font-weight: bold;
 }
