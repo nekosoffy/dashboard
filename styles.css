@@ -155,6 +155,7 @@ button:active {
 
 #profile {
     display: grid;
+    align-items: center;
     grid-column: 1 / 1;
     grid-template-columns: max-content max-content;
     column-gap: 10px;
@@ -162,16 +163,13 @@ button:active {
 
 #profile img {
     width: max(50px,4vw);
-    grid-row: 1 / 3;
 }
 
 #profile p:first-of-type {
-    align-self: end;
     font-size: calc(1rem + 1vmin);
 }
 
 #profile p:last-of-type {
-    align-self: start;
     font-size: calc(1.2rem + 1vmin);
     font-weight: bold;
 }
@@ -197,7 +195,7 @@ button:active {
     font-size: calc(1rem + 1vmin);
 }
 
-#upper-profile img {
+.small-image {
     width: max(25px,3vw);
 }
 
@@ -235,7 +233,7 @@ button:active {
 main {
     grid-column: 2 / span 2;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40%,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(35%,1fr));
     grid-template-rows: max-content auto;
     gap: 40px;
     margin-right: 20px;
@@ -317,8 +315,29 @@ hr {
 
 #trending {
     grid-column: 4 / 5;
+    margin-top: 30px;
 }
 
 #trending div {
     background-color: var(--main-color);
+    border-radius: 8px;
+}
+
+#trending > div {
+    display: grid;
+    gap: 20px;
+    padding: 30px 20px 30px 20px;
+}
+
+.mini-profile {
+    display: grid;
+    align-items: center;
+    grid-template-columns: max-content auto;
+    grid-template-rows: 1fr;
+    gap: 10px;
+}
+
+.mini-profile img {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
 }
