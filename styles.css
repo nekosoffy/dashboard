@@ -19,6 +19,7 @@
     --main-color: #dfccf5;
     --background-color: #ffffff;
     --secondary-color: #331f5e;
+    --dark-sec-color: #241544;
     --profile-theme-color: #be4c68;
     --font-color: #363435;
 }
@@ -121,6 +122,7 @@ a:hover, a:active {
     row-gap: 10px;
     align-items: center;
     padding: max(10px,1%) 5%;
+    box-shadow: 0 2px 10px -2px gray;
 }
 
 form {
@@ -200,6 +202,7 @@ button:active {
     column-gap: 0.6vw;
     font-weight: bold;
     font-size: calc(1rem + 1vmin);
+    cursor: pointer;
 }
 
 #upper-profile-wrapper {
@@ -234,6 +237,12 @@ button:active {
     height: max(30px,5vh);
     font-size: calc(1rem + 0.8vmin);
     background-color: var(--secondary-color);
+    box-shadow: 4px 4px 10px -2px gray;
+}
+
+.command-button:active {
+    box-shadow: none;
+    background-color: var(--dark-sec-color);
 }
 
 #new-button {
@@ -251,16 +260,16 @@ button:active {
 main {
     grid-column: 2 / span 2;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(35%,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(40%,1fr));
     grid-template-rows: max-content auto;
-    gap: 40px;
+    gap: 2vw;
     margin-right: 20px;
     margin-left: 20px;
 }
 
 main h2 {
     grid-column: 1 / -1;
-    margin-bottom: -40px;
+    margin-bottom: -2vw;
 }
 
 main article {
@@ -271,6 +280,8 @@ main article {
     grid-template-rows: max-content max-content auto;
     row-gap: 2px;
     padding: 40px 30px 40px 30px;
+    box-shadow: 4px 4px 10px -2px gray;
+    backdrop-filter: blur(0px);
 }
 
 main div {
@@ -310,7 +321,7 @@ main div img {
 }
 
 aside h2 {
-    margin-bottom: 10px;
+    margin-bottom: 0.5vw;
 }
 
 aside p {
@@ -331,10 +342,15 @@ hr {
     background-color: var(--main-color);
     border-radius: 8px;
     padding: 40px 30px 40px 30px;
+    box-shadow: 4px 4px 10px -2px gray;
 }
 
 #announcements {
     grid-column: 4 / 5;
+}
+
+#announcements article {
+    cursor: pointer;
 }
 
 #trending {
@@ -351,6 +367,7 @@ hr {
     display: grid;
     gap: 20px;
     padding: 30px 20px 30px 20px;
+    box-shadow: 4px 4px 10px -2px gray;
 }
 
 .mini-profile {
@@ -359,6 +376,12 @@ hr {
     grid-template-columns: max-content auto;
     grid-template-rows: 1fr;
     gap: 10px;
+    cursor: pointer;
+}
+
+.mini-profile:active,
+#upper-profile:active {
+    transform: scale(0.90);
 }
 
 .mini-profile img {
