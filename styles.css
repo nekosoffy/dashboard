@@ -115,12 +115,12 @@ a:hover, a:active {
 
 #top-wrapper {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: max-content auto;
     grid-column: 2 / span 3;
     background-color: var(--main-color);
     row-gap: 10px;
     align-items: center;
-    padding: 1%;
+    padding: max(10px,1%) 5%;
 }
 
 form {
@@ -149,16 +149,23 @@ button:active {
 
 #search {
     background-color: var(--background-color);
-    width: 33vw;
+    width: 35vw;
     border: none;
     border-radius: 10px;
+    appearance: none;
+    padding: 0.5vw 0.5vw 0.3vw 0.5vw;
+}
+
+#search:active {
+    outline: 1px solid black;
 }
 
 #profile {
     display: grid;
+    grid-auto-flow: column;
     align-items: center;
     grid-column: 1 / 1;
-    grid-template-columns: max-content max-content;
+    grid-template-columns: max-content max-content auto;
     column-gap: 10px;
 }
 
@@ -176,7 +183,7 @@ button:active {
 }
 
 #notification-button {
-    grid-column: 2 / 3;
+    grid-column: 1 / 1;
     justify-self: end;
     margin-right: 1vw;
 }
@@ -189,33 +196,43 @@ button:active {
 #upper-profile {
     display: grid;
     grid-template-columns: max-content max-content;
-    grid-column: 3 / 4;
     align-items: center;
-    column-gap: 1vw;
+    column-gap: 0.6vw;
     font-weight: bold;
     font-size: calc(1rem + 1vmin);
+}
+
+#upper-profile-wrapper {
+    display: grid;
+    justify-self: end;
+    grid-auto-flow: column;
+    grid-template-columns: max-content max-content;
+
 }
 
 .small-image {
     width: max(25px,3vw);
 }
 
-#test {
+#button-set {
     display: grid;
+    align-self: center;
+    justify-self: end;
     grid-auto-flow: column;
-    grid-template-areas: ". new upload share .";
-    grid-template-columns: 2fr max-content max-content max-content 5vw;
-    grid-column: 2 / span 2;
+    grid-template-areas: "new upload share";
+    grid-template-columns: max-content max-content max-content;
+    grid-column: 3 / span 1;
     gap: 1vw;
 }
 
 .command-button {
     border-radius: 20px;
     border: none;
-    padding: 5px;
+    padding: 6px 0 6px 0;
     font-weight: bold;
-    width: max(50px,5vw);
-    font-size: calc(0.9rem + 1vmin);
+    width: max(50px,6vw);
+    height: max(30px,5vh);
+    font-size: calc(1rem + 0.8vmin);
     background-color: var(--secondary-color);
 }
 
@@ -277,7 +294,7 @@ main p {
 }
 
 main div img {
-    width: 1.5vw;
+    width: 1.2vw;
 }
 
 #favorite-button {
