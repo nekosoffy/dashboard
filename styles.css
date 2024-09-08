@@ -105,13 +105,17 @@ nav li:nth-child(7) {
     margin-top: 10%;
 }
 
-a:link, a:visited {
+header a:link, header a:visited {
     text-decoration: none;
     color: white;
 }
 
-a:hover, a:active {
+header a:hover, header a:active {
     color: #FAA9A9;
+}
+
+aside a:link, aside a:visited {
+    color: black;
 }
 
 #top-wrapper {
@@ -347,10 +351,6 @@ hr {
 
 #announcements {
     grid-column: 4 / 5;
-}
-
-#announcements article {
-    cursor: pointer;
 }
 
 #trending {
