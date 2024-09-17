@@ -9,13 +9,14 @@
     font-size: 62.5%;
 
     /* Colors */
-    --main-color: #e0d2f1;
-    --background-color: #ffffff;
-    --secondary-color: #331f5e;
-    --dark-sec-color: #241544;
-    --profile-theme-color: #be4c68;
-    --font-color: #363435;
-    --header-text-color: white;
+    --main-color: rgb(224, 210, 241);
+    --background-color: rgb(255, 255, 255);
+    --secondary-color: rgb(51, 31, 94);
+    --dark-sec-color: rgb(36, 21, 68);
+    --cards-secondary-color: rgb(187, 171, 207);
+    --profile-theme-color: rgb(190, 76, 104);
+    --font-color: rgb(54, 52, 53);
+    --header-text-color: rgb(255, 255, 255);
     --dark-text-color: rgb(24, 22, 56);
 
     /* Font sizes */
@@ -406,8 +407,6 @@ aside h3 {
 
 #trending > div {
     display: grid;
-    gap: 20px;
-    padding: 2rem;
 }
 
 .mini-profile {
@@ -417,12 +416,20 @@ aside h3 {
     grid-template-rows: 1fr;
     gap: 10px;
     cursor: pointer;
+    padding: 1.5rem;
+    border-radius: 5px;
 }
 
 .mini-profile:active,
 #upper-profile:active {
     transform: scale(0.90);
+    background-color: var(--cards-secondary-color);
 }
+
+.mini-profile:hover,
+#upper-profile:hover {
+    background-color: var(--cards-secondary-color);
+} 
 
 .mini-profile img {
     grid-column: 1 / 2;
