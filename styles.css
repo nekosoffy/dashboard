@@ -85,12 +85,16 @@ nav ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1rem;
 }
 
 nav li {
     font-size: max(13px, 1.2vw);
     font-weight: bold;
+    padding: 1rem;
+}
+
+nav li:hover {
+    background-color: var(--dark-sec-color);
 }
 
 nav li:nth-child(7) {
@@ -110,7 +114,7 @@ header a:link, header a:visited {
 }
 
 header a:hover, header a:active {
-    color: #FAA9A9;
+    color: white;
 }
 
 aside a:link, aside a:visited {
@@ -181,22 +185,29 @@ button:active {
 
 #profile p:first-of-type {
     font-size: calc(1rem + 1vmin);
+    color: rgb(24, 22, 56); 
 }
 
 #profile p:last-of-type {
     font-size: calc(1.2rem + 1vmin);
     font-weight: bold;
+    color: rgb(24, 22, 56);
 }
 
 #notification-button {
     grid-column: 1 / 1;
     justify-self: end;
     margin-right: 1vw;
+    transition: all 0.5 ease;
 }
 
 #notification-button img {
     width: max(20px, 1.4vw);
     vertical-align: middle;
+}
+
+#notification-button img:hover {
+    transform: rotate(20deg);
 }
 
 #upper-profile {
@@ -207,6 +218,7 @@ button:active {
     font-weight: bold;
     font-size: calc(1rem + 1vmin);
     cursor: pointer;
+    color: rgb(24, 22, 56);
 }
 
 #upper-profile-wrapper {
@@ -243,12 +255,17 @@ button:active {
     font-weight: 700;
     background-color: var(--secondary-color);
     box-shadow: 4px 4px 1px 1px rgb(24, 23, 23);
+    transition: all 0.5 ease;
 }
 
 .command-button:active {
     box-shadow: none;
     background-color: var(--dark-sec-color);
     transform: translate(4px);
+}
+
+.command-button:hover {
+    background-color: var(--dark-sec-color);
 }
 
 #new-button {
@@ -294,6 +311,10 @@ main article {
     width: 100%;
     height: 100%;
     padding: 2rem;
+}
+
+main article:hover {
+    transform: translate(0, -5px);
 }
 
 .main-button-wrapper {
