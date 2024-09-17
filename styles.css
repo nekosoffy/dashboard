@@ -7,12 +7,37 @@
 
 :root {
     font-size: 62.5%;
+
+    /* Colors */
     --main-color: #e0d2f1;
     --background-color: #ffffff;
     --secondary-color: #331f5e;
     --dark-sec-color: #241544;
     --profile-theme-color: #be4c68;
     --font-color: #363435;
+    --header-text-color: white;
+    --dark-text-color: rgb(24, 22, 56);
+
+    /* Font sizes */
+    --body-font-size: 1.6rem;
+    --h1-font-size: max(30px, 2vw);
+    --nav-font-size: max(13px, 1.2vw);
+    --profile-font-size: calc(1rem + 1vmin);
+    --profile-name-font-size: calc(1.2rem + 1vmin);
+    --button-font-size: clamp(0.9rem, 0.5rem + 0.6vw, 1.5rem);
+    --main-h3-font-size: max(1.2rem, 1.2vw);
+    --aside-h2-font-size: max(2rem, 1.3vw);
+    --aside-h3-font-size: max(1.2rem, 1vw);
+    --aside-p-font-size: 1.4rem;
+
+    /* Sizes */
+    --logo-size: max(30px, 4vw);
+    --nav-icon-size: max(13px, 1.1vw);
+    --search-button-size: max(20px, 1vw);
+    --profile-img-size: max(50px, 4vw);
+    --notification-icon-size: max(20px, 1.4vw);
+    --small-image-size: max(50px, 3vw);
+    --main-icon-size: max(20px, 1.2vw);
 }
 
 *, *::before, *::after {
@@ -22,7 +47,7 @@
 
 body {
     -webkit-font-smoothing: antialiased;
-    font-size: 1.6rem;
+    font-size: var(--body-font-size);
     font-family: 'rubikregular', sans-serif;
     height: 100vh;
 }
@@ -42,12 +67,10 @@ input, button, textarea, select {
 
 ul {
     padding: 0;
-}
-
-li {
     list-style-type: none;
 }
 
+/* Layout */
 #container {
     display: grid;
     grid-template-columns: max-content 1fr;
@@ -55,10 +78,11 @@ li {
     width: 100%;
 }
 
+/* Header styles */
 header {
     grid-row: span 3;
     background-color: var(--secondary-color);
-    color: white;
+    color: var(--header-text-color);
     padding: 10px 20px 0 5px;
     z-index: 1;
 }
@@ -69,14 +93,15 @@ header {
 }
 
 #logo img {
-    width: max(30px, 4vw);
+    width: var(--logo-size);
     transform: translateY(-2px);
 }
 
 h1 {
-    font-size: max(30px, 2vw);
+    font-size: var(--h1-font-size);
 }
 
+/* Navigation styles */
 #navigation {
     margin-top: 8%;
 }
@@ -88,7 +113,7 @@ nav ul {
 }
 
 nav li {
-    font-size: max(13px, 1.2vw);
+    font-size: var(--nav-font-size);
     font-weight: bold;
     padding: 1rem;
 }
@@ -103,18 +128,14 @@ nav li:nth-child(7) {
 
 nav img {
     display: inline;
-    width: max(13px, 1.1vw);
+    width: var(--nav-icon-size);
     margin: 0 0.3vw 0 0.8vw;
     transform: translateY(2.5px);
 }
 
-header a:link, header a:visited {
+header a:link, header a:visited, header a:hover, header a:active {
     text-decoration: none;
-    color: white;
-}
-
-header a:hover, header a:active {
-    color: white;
+    color: var(--header-text-color);
 }
 
 aside a:link, aside a:visited {
@@ -122,6 +143,7 @@ aside a:link, aside a:visited {
     text-decoration: none;
 }
 
+/* Top wrapper styles */
 #top-wrapper {
     display: grid;
     grid-template-columns: max-content auto;
@@ -133,6 +155,7 @@ aside a:link, aside a:visited {
     box-shadow: 0 2px 10px -2px gray;
 }
 
+/* Form styles */
 form {
     display: grid;
     grid-template-columns: max-content auto;
@@ -153,9 +176,10 @@ form {
     outline: 1px solid black;
 }
 
+/* Button styles */
 button {
     background-color: var(--main-color);
-    color: white;
+    color: var(--header-text-color);
     cursor: pointer;
     border: none;
     padding: 0;
@@ -166,10 +190,11 @@ button:active {
 }
 
 #search-button img {
-    width: max(20px, 1vw);
+    width: var(--search-button-size);
     vertical-align: middle;
 }
 
+/* Profile styles */
 #profile {
     display: grid;
     grid-auto-flow: column;
@@ -180,29 +205,30 @@ button:active {
 }
 
 #profile img {
-    width: max(50px, 4vw);
+    width: var(--profile-img-size);
 }
 
 #profile p:first-of-type {
-    font-size: calc(1rem + 1vmin);
-    color: rgb(24, 22, 56); 
+    font-size: var(--profile-font-size);
+    color: var(--dark-text-color);
 }
 
 #profile p:last-of-type {
-    font-size: calc(1.2rem + 1vmin);
+    font-size: var(--profile-name-font-size);
     font-weight: bold;
-    color: rgb(24, 22, 56);
+    color: var(--dark-text-color);
 }
 
+/* Notification button styles */
 #notification-button {
     grid-column: 1 / 1;
     justify-self: end;
     margin-right: 1vw;
-    transition: all 0.5 ease;
+    transition: all 0.5s ease;
 }
 
 #notification-button img {
-    width: max(20px, 1.4vw);
+    width: var(--notification-icon-size);
     vertical-align: middle;
 }
 
@@ -210,15 +236,16 @@ button:active {
     transform: rotate(20deg);
 }
 
+/* Upper profile styles */
 #upper-profile {
     display: grid;
     grid-template-columns: max-content max-content;
     align-items: center;
     column-gap: 0.6vw;
     font-weight: bold;
-    font-size: calc(1rem + 1vmin);
+    font-size: var(--profile-font-size);
     cursor: pointer;
-    color: rgb(24, 22, 56);
+    color: var(--dark-text-color);
 }
 
 #upper-profile-wrapper {
@@ -230,16 +257,17 @@ button:active {
 }
 
 .small-image {
-    width: max(50px, 3vw);
+    width: var(--small-image-size);
 }
 
+/* Button set styles */
 #button-set {
     display: grid;
     align-self: center;
     justify-self: end;
     grid-auto-flow: column;
     grid-template-areas: "new upload share";
-    grid-template-columns: max-content max-content max-content;
+    grid-template-columns: repeat(3, max-content);
     grid-column: 3 / span 1;
     gap: 1vw;
 }
@@ -251,11 +279,11 @@ button:active {
     padding: 3%;
     border-radius: 3vw;
     border: none;
-    font-size: clamp(0.9rem, 0.5rem + 0.6vw, 1.5rem);
+    font-size: var(--button-font-size);
     font-weight: 700;
     background-color: var(--secondary-color);
     box-shadow: 4px 4px 1px 1px rgb(24, 23, 23);
-    transition: all 0.5 ease;
+    transition: all 0.5s ease;
 }
 
 .command-button:active {
@@ -268,18 +296,11 @@ button:active {
     background-color: var(--dark-sec-color);
 }
 
-#new-button {
-    grid-area: new;
-}
+#new-button { grid-area: new; }
+#upload-button { grid-area: upload; }
+#share-button { grid-area: share; }
 
-#upload-button {
-    grid-area: upload;
-}
-
-#share-button {
-    grid-area: share;
-}
-
+/* Main content styles */
 main {
     display: grid;
     grid-auto-rows: max-content;
@@ -328,6 +349,7 @@ main article:hover {
 
 main h3 {
     align-self: end;
+    font-size: var(--main-h3-font-size);
 }
 
 main p {
@@ -337,47 +359,35 @@ main p {
 }
 
 main div img {
-    width: max(20px,1.2vw);
+    width: var(--main-icon-size);
 }
 
-#favorite-button {
-    grid-area: favorite;
-}
+#favorite-button { grid-area: favorite; }
+#view-button { grid-area: view; }
+#share-button { grid-area: share; }
 
-#view-button {
-    grid-area: view;
-}
-
-#share-button {
-    grid-area: share;
-}
-
+/* Aside styles */
 aside p {
     color: var(--font-color);
 }
 
 hr {
-    margin: 20px 0 20px 0;
+    margin: 20px 0;
     border: 1px solid rgb(175, 170, 170);
 }
 
 h2 {
-    font-size: max(2rem, 1.3vw);
+    font-size: var(--aside-h2-font-size);
     margin-bottom: 5px;
 }
 
 #announcements p {
-    font-size: 1.1rem,;
+    font-size: var(--aside-p-font-size);
 }
 
 aside h3 {
-    font-size: max(1.2rem, 1vw);
+    font-size: var(--aside-h3-font-size);
 }
-
-main h3 {
-    font-size: max(1.2rem, 1.2vw);
-}
-
 
 #announcements > div {
     padding: 2rem;
@@ -392,11 +402,6 @@ main h3 {
 
 #trending {
     margin-top: 3.5rem;
-}
-
-#trending div {
-    background-color: var(--main-color);
-    border-radius: 8px;
 }
 
 #trending > div {
@@ -425,10 +430,10 @@ main h3 {
 }
 
 .mini-profile div p:first-child {
-    color: rgb(24, 22, 56);
+    color: var(--dark-text-color);
     font-weight: bold;
 }
 
 h2, h3 {
-    color: rgb(24, 22, 56);
+    color: var(--dark-text-color);
 }
