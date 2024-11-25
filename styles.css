@@ -157,6 +157,10 @@ header a:active {
   color: var(--header-text-color);
 }
 
+header a {
+  display: block;
+}
+
 aside a:link,
 aside a:visited {
   color: black;
