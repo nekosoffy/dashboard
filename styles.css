@@ -453,8 +453,12 @@ aside h3 {
 
 .mini-profile:active,
 #upper-profile:active {
-  transform: scale(0.9);
   background-color: var(--cards-secondary-color);
+}
+
+.mini-profile:active > *,
+#upper-profile:active > * {
+  transform: scale(0.95);
 }
 
 .mini-profile:hover,
