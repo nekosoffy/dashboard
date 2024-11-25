@@ -99,13 +99,13 @@ header {
   grid-row: span 3;
   background-color: var(--secondary-color);
   color: var(--header-text-color);
-  padding: 10px 20px 0 5px;
   z-index: 1;
 }
 
 #logo {
   display: inline-flex;
   align-items: center;
+  margin: 10px 20px 0 10px;
 }
 
 #logo img {
