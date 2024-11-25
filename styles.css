@@ -451,8 +451,7 @@ aside h3 {
   border-radius: 5px;
 }
 
-.mini-profile:active,
-#upper-profile:active {
+.mini-profile:active {
   background-color: var(--cards-secondary-color);
 }
 
@@ -461,8 +460,7 @@ aside h3 {
   transform: scale(0.95);
 }
 
-.mini-profile:hover,
-#upper-profile:hover {
+.mini-profile:hover {
   background-color: var(--cards-secondary-color);
 }
 
